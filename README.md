@@ -1,9 +1,12 @@
 Overview
+
 Reverse Polish Notation (or postfix notation) is a mathematical notation in which operators follow operands. For example, the infix expression 2 + 4 is expressed as 2 4 + in postfix notation, and 1 + 4 * 3 is expressed as 1 4 3 * +. In this assignment, you are required to develop a reverse polish notation calculator that can take an infix expression, convert it to postfix notation, and then evaluate the expression to solve the equation.
 Assumed Knowledge
+
 Infix expressions are made up of operands and operators. Operands are the input: in the expression 1 + 2, the operands are 1 and 2. Operators are the action: for example, adding, subtracting, multiplying or dividing. The order operators are evaluated matters: choosing to do an addition before a multiplication gives a different result than doing the multiplication before the addition.
 As an example, consider the expression 1 + 2 * 3. Evaluating the addition operator before the multiplication yields a different result:
 Addition first:
+
 1 + 2 * 3 == (1 + 2) * 3
 == 3 * 3
 == 9
@@ -11,14 +14,18 @@ Multiplication first:
 1 + 2 * 3 == 1 + (2 * 3)
 == 1 + 6
 == 7
+
 To avoid this ambiguity, operators are given precedence — when given a choice, operands are done in a specific order:
 •Brackets (Parentheses)
 •Exponents
 •Division / Multiplication
 •Addition / Subtraction
+
 Thus, according to our precedence rules, the correct answer to our example above is 7 (multiplication before addition).
 Implementation
+
 There are two parts to this assignment. In part 1, you are required to implement several collections (Linked List, Stack and Queue). In part 2 you will implement an infix-to-postfix parser, and a postfix calculator. This assignment has tests to show how well your solution is working. These tests are NOT 100% complete, meaning they will miss things, so you need to do your own testing as well. Final marking for the assignment will use additional tests, meaning if your code may pass these tests, but still fail the final marking if your code is not fully functional.
+
 Importing into eclipse
 The Assignment has been provided as an eclipse project. You just need to import the project into an existing workspace. In the latest version of Eclipse, go File > Open Projects from File System and
 open the directory of the project (the one with the src folder in it). For older versions, see Figure 1 for a visual guide. Make sure that your Java JDK has been set, as well as the two jar files that you need for junit to function. This can be found in Project > Properties > Java Build Path > Libraries. The jar files have been provided within the project; there is no need to download any other version and doing so may impact the testing environment. Cleaning the project may help some issues with your initial running of the project. This can be found in Project > Clean.
